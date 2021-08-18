@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.headerOne{
+  margin: 48px;
+}
+
+.tab-wrapper {
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.tab-wrapper .tab-heading {
+  position: relative;
+  display: flex;
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  justify-content: center;
+  width: 90%;
+}
+.tab-wrapper .tab-heading .tab-list {
+  padding: 8px 0;
+  text-align: center;
+  background-color: #fff;
+  float: left;
+  cursor: pointer;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.paragraph{
+  padding: 0 15px;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color:#323232
+}
+.item3-container{
+  position: relative;
+  justify-content: space-around;
+  display: flex;
+  width: 60%;
+  margin: 0 auto;  
+}
+.line {
+  margin: 0 auto;
+  position: relative;
+  height: 15px;
+  width: 46px;
+  border-bottom: 1px solid black;
+  margin-bottom: 28px;
+  margin-top: 8px;
+}
+.item-numbers{
+  position: relative;
+  text-align: center;
+  width: 30%;
+}
+.per-number{
+  font-size: 50px;
+  color: #323232;
+}
+.per-items{
+  font-size: 21px;
+}
+.tab-wrapper .tab-heading .tab-list.active {
+  background-color: black;
+  color: white;
+}
+.tab-wrapper .tab-heading .tab-list:hover {
+  background-color: #b7b7b7;
+  color: white;
+}
+.tab-wrapper .tab-content {
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+.tab-wrapper .tab-content .tab-panel {
+  padding: 20px 0px;
+  display: none;
+}
+.tab-wrapper .tab-content .tab-panel.active {
+  display: block;
+}
+.tab-wrapper .tab-content .tab-panel .tab-list-sp {
+  display: none;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+/* .tab-wrapper .tab-content .tab-panel .tab-list-sp.active {
+  color: green;
+} */
+.tab-wrapper .tab-content .tab-panel .list-content {
+  width: 100%;
+  display: none;
+  padding: 10px;
+}
+.tab-wrapper .tab-content .tab-panel .list-content.active {
+  display: block;
+}
+.item3-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+@media(max-width: 767px) {
+  .headerOne{
+    margin: 0;
+  }
+  .tab-wrapper {
+    width: 100%;
+  }
+  .tab-wrapper .tab-heading {
+    display: none;
+  }
+  .tab-wrapper .tab-content .tab-panel {
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .header-container{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  } 
+  .item-name{
+    display: inline-block;
+  }
+/*  
+  .icon {
+    position: relative;
+    border: 1px dotted white;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    box-sizing: border-box;
+    transform: scale(5);   
+  } */
+
+  .icon-plus{
+    content: '';
+    position: absolute;
+    width: 19px;
+    margin-left: -29px;
+    margin-top: 8px;
+    border-top: 2px solid;
+  }
+
+  .icon-plus-extra.active{
+    content: '';
+    position: absolute;
+    height: 20px;
+    margin-left: -20.4px;
+    margin-top: -1px;
+    border-left: 2px solid;
+  }
+  
+
+  .tab-wrapper .tab-content .tab-panel .tab-list-sp {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 1px solid #000000;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 8px 20px;
+  }
+  .tab-wrapper .tab-content .tab-panel:first-child .tab-list-sp{
+    border:none
+  }
+  .tab-wrapper .tab-content .tab-panel .tab-list-sp.active {
+    border-bottom:none;
+    padding-left: 20px;
+  }
+  .paragraph {
+    padding: 0 18px 18px 18px;
+  }
+  .per-number {
+    font-size: 35px;
+  }
+  .tab-wrapper .tab-content .tab-panel .list-content {
+    display: block;
+    padding: 0 0px;
+    height: 0;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -ms-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
+    transition: all 0.05s ease-in-out;
+  }
+  .tab-wrapper .tab-content .tab-panel .list-content.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    max-height: 300px;
+    transition-duration: 0.5s;
+  }
+}
